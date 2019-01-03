@@ -30,19 +30,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-xd-eGy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-xd-eGy">
                                 <rect key="frame" x="0.0" y="69" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="bg6-NU-I2y" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="144" id="bg6-NU-I2y" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bg6-NU-I2y" id="5gp-TX-yww">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-e0-4BJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-e0-4BJ">
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="137.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="148" id="xFl-nM-cVC"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-N1-lSd">
                                                     <rect key="frame" x="109" y="58" width="156" height="28"/>
@@ -56,17 +59,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HzX-e0-4BJ" firstAttribute="top" secondItem="5gp-TX-yww" secondAttribute="top" id="Jz2-1y-bRh"/>
                                                 <constraint firstItem="WXC-N1-lSd" firstAttribute="centerX" secondItem="5gp-TX-yww" secondAttribute="centerX" id="NRP-md-GcL"/>
                                                 <constraint firstAttribute="trailing" secondItem="HzX-e0-4BJ" secondAttribute="trailing" id="dSg-ov-UVp"/>
                                                 <constraint firstItem="WXC-N1-lSd" firstAttribute="centerY" secondItem="5gp-TX-yww" secondAttribute="centerY" id="fc4-5g-glW"/>
                                                 <constraint firstItem="HzX-e0-4BJ" firstAttribute="leading" secondItem="5gp-TX-yww" secondAttribute="leading" id="gbv-AL-vly"/>
-                                                <constraint firstAttribute="bottom" secondItem="HzX-e0-4BJ" secondAttribute="bottom" id="xW4-1L-Rah"/>
+                                                <constraint firstItem="HzX-e0-4BJ" firstAttribute="top" secondItem="5gp-TX-yww" secondAttribute="top" constant="3" id="jLa-j2-hqf"/>
+                                                <constraint firstAttribute="bottom" secondItem="HzX-e0-4BJ" secondAttribute="bottom" constant="3" id="mUc-3j-nuN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImage" destination="HzX-e0-4BJ" id="cTG-bu-Hbi"/>
-                                            <outlet property="cateogryTitle" destination="WXC-N1-lSd" id="jSC-5t-Tuo"/>
+                                            <outlet property="categoryTitle" destination="WXC-N1-lSd" id="jSC-5t-Tuo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
